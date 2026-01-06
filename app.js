@@ -1,6 +1,9 @@
-export default function add(a, b) {
-  if (typeof a !== "number" || typeof b !== "number") {
-    throw new Error("Invalid input");
+
+
+export function subNumbers(num1, num2) {
+  if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+    throw new Error("numbers not invalid");
   }
-  return a + b;
+
+  return num1 - num2;
 }

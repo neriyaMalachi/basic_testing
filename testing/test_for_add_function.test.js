@@ -1,13 +1,10 @@
-import add from "../app.js";
+import { subNumbers } from "../app.js";
+import test from "node:test";
+import assert from "node:assert/strict";
 
-describe("add function", () => {
 
-  test("adds two numbers", () => {
-    expect(add(2, 3)).toBe(5);
-  });
 
-  test("throws error on bad input", () => {
-    expect(() => add("2", 3)).toThrow();
-  });
 
-});
+test("numbers: sub function test", () => {assert.equal(subNumbers("2", 2), 0);});
+
+test("sum function test drope error", () => { assert.throws(() => subNumbers("2", 2));});
